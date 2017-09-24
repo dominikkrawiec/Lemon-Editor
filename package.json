@@ -1,0 +1,16 @@
+{
+  "name": "chloe-editor",
+  "version": "1.0.0",
+  "description": "super simple text editor",
+  "main": "editor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "editor",
+    "simple",
+    "node"
+  ],
+  "author": "Dominik Krawiec",
+  "license": "ISC"
+}
