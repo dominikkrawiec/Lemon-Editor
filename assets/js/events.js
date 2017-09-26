@@ -42,7 +42,7 @@ shareBtn.addEventListener('click', function(){
         }
     }
 
-    xhr.open('POST', '/editor');
+    xhr.open('POST', '/save');
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.send("title=" + data.title +"&lead=" + data.lead + "&content=" + data.content);
 });

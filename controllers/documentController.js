@@ -1,3 +1,4 @@
+
 var mongoose = require('mongoose');
 var bodyparser = require('body-parser');
 var urlencodedParser = bodyparser.urlencoded({extenden: false});
@@ -20,7 +21,7 @@ module.exports = function(app) {
   });
 
 
-  app.post("/editor", urlencodedParser, function(req,res){
+  app.post("/save", urlencodedParser, function(req,res){
       var data = req.body;
 
       var doc = new Doc({
