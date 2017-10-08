@@ -1,3 +1,4 @@
+
 var content = document.querySelector('.content'),
     title = document.querySelector('header'),
     lead = document.querySelector('.lead'),
@@ -5,16 +6,28 @@ var content = document.querySelector('.content'),
 
 // save content to localStorage when element is changed
 content.onkeyup= function(){
+    // saving current caret position
+    var caret = getCaretCharacterOffsetWithin(content);
+    localStorage.setItem('cursor', caret);
     localStorage.setItem('content', content.innerHTML);
+    localStorage.setItem('currentElement', 'content');
     };
 
 title.onkeyup= function(){
+    var caret = getCaretCharacterOffsetWithin(title);
+    localStorage.setItem('cursor', caret);
     localStorage.setItem('title', title.innerHTML);
+    localStorage.setItem('currentElement', 'title');
     };
 
 lead.onkeyup= function(){
+    var caret = getCaretCharacterOffsetWithin(lead);
+    localStorage.setItem('cursor', caret);
     localStorage.setItem('lead', lead.innerHTML);
+    localStorage.setItem('currentElement', 'lead');
+
     };
+
 
 
 shareBtn.addEventListener('click', function(){
