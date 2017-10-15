@@ -28,34 +28,28 @@ lead.onkeyup= function(){
 
     };
 
-
-
 shareBtn.addEventListener('click', function(){
-  var data = {
+  var text = {
     title: title.innerHTML,
     lead: lead.innerHTML,
     content: content.innerHTML
   };
-  var xhr;
-    if (window.XMLHttpRequest) {
-        xhr = new XMLHttpRequest();
-    }
-    else if (window.ActiveXObject) {
-        xhr = new ActiveXObject("Msxml2.XMLHTTP");
-    }
-    else {
-        throw new Error("Ajax is not supported by this browser");
-    }
 
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-            if (xhr.status == 200 && xhr.status < 300) {
-                console.log(data);
-            }
-        }
-    }
+  if(window.location.pathname != '/') {
+    text.docId = window.location.pathname;
+  } else {
+    text.docId = null;
+  }
 
-    xhr.open('POST', '/save');
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.send("title=" + data.title +"&lead=" + data.lead + "&content=" + data.content);
+  console.log(text.docId);
+
+  $.ajax({
+    type: 'POST',
+    contentType: "application/x-www-form-urlencoded",
+    url: '/save',
+    data: "docid=" + text.docId+ "&title=" + text.title +"&lead=" + text.lead + "&content=" + text.content,
+    success: function(data){
+      window.location = data.redirect;
+    }
+  });
 });

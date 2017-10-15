@@ -6,20 +6,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
+  <div id="link">
+    <%= url %>
+  </div>
   <button id="share">Edit with Friends</button>
 
   <header contenteditable="true" class="title">
+    <%= title %>
   </header>
 
   <article contenteditable="true" class="lead">
+    <%= lead %>
   </article>
 
   <article contenteditable="true" class="content">
+    <%= content %>
   </article>
 
     <script src="/js/caret.js"></script>
     <script src="/js/events.js"></script>
-    <script src="/js/data.js"></script>
     <script src="/js/socket.js"></script>
 </body>
 </html>

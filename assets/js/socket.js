@@ -11,10 +11,10 @@ document.onkeyup = function(){
   socket.emit('editor', {
     content: editor.innerHTML,
     lead: lead.innerHTML,
-    title: title.innerHTML
+    title: title.innerHTML,
+    url: window.location.pathname
   } );
 
-  console.log('tralalal');
 }
 
 socket.on('editor', function(data){
