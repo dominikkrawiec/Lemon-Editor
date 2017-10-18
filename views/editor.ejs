@@ -3,19 +3,24 @@
   <meta charset="utf-8" />
   <title>Welcome to Chloe Editor</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Gilda+Display|Open+Sans" rel="stylesheet">
 </head>
 <body>
   <button id="share">Edit with Friends</button>
+  <div id="editor">
+    <header contenteditable="true" class="title active">
+    </header>
 
-  <header contenteditable="true" class="title">
-  </header>
+    <article contenteditable="true" class="lead">
+    </article>
 
-  <article contenteditable="true" class="lead">
-  </article>
-
-  <article contenteditable="true" class="content">
-  </article>
+    <article contenteditable="true" class="content">
+    </article>
+  </div>
 
     <script src="/js/caret.js"></script>
     <script src="/js/events.js"></script>

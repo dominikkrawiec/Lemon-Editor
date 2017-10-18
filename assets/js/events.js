@@ -1,4 +1,6 @@
 
+
+// data events
 var content = document.querySelector('.content'),
     title = document.querySelector('header'),
     lead = document.querySelector('.lead'),
@@ -53,3 +55,33 @@ shareBtn.addEventListener('click', function(){
     }
   });
 });
+
+
+// View events
+
+$('#editor').on('click', '*', function(){
+  var clicked = $(this);
+
+  var childs = $('#editor').children().each(function(){
+    $(this).removeClass('active');
+  });
+
+  clicked.addClass('active');
+  var elClass = clicked.attr('class');
+
+  switch(elClass){
+    case 'title active':
+    var howMuch = '30px';
+    break;
+
+    case 'lead active':
+    howMuch = '50px';
+    break;
+
+    case 'content active':
+    howMuch = '100px';
+    break;
+  }
+
+  $('#editor').css('transform', 'translateY(-'+ howMuch+')');
+  });

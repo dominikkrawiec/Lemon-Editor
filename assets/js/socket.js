@@ -1,19 +1,20 @@
 
 
 // Make connection to the server
-var socket = io.connect('http://localhost:3000');
+//var socket = io.connect('https://cryptic-sea-12612.herokuapp.com');
+var socket = io.connect('http://localhost:3000')
 
 var editor = document.querySelector('.content'),
     title = document.querySelector('header'),
     lead = document.querySelector('.lead');
 
 document.onkeyup = function(){
-  socket.emit('editor', {
-    content: editor.innerHTML,
-    lead: lead.innerHTML,
-    title: title.innerHTML,
-    url: window.location.pathname
-  } );
+    socket.emit('editor', {
+      content: editor.innerHTML,
+      lead: lead.innerHTML,
+      title: title.innerHTML,
+      url: window.location.pathname
+    } );
 
 }
 
