@@ -62,8 +62,46 @@ body {
 }
 
 #link {
-  position: fixed;
-  right: 0;
-  top: 20px;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255,255,255,0.8);
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  transition: all 1s ease-in-out;
+}
 
+.url-box  {
+  background-color: #F6F6F6;
+  border: 3px solid lightgray;
+  border-radius: 5px;
+  padding: 50px 70px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+}
+
+.url-box p {
+  margin-top: 0;
+}
+
+.url-box input {
+  padding: 10px;
+  border: 1px solid skyblue;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.url-box .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.url-box ol li {
+  margin: 10px 0;
 }

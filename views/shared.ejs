@@ -11,10 +11,28 @@
 </head>
 <body>
   <div id="link">
-    <%= url %>
+    <div class="url-box">
+      <img src="/img/cross-out.png" class="close">
+      <p>
+        Listen carefully, dude.
+        There are some rules you should remember.
+        <ol>
+          <li>Your invited friends will see everything you write down on an editor. Every change you make will automatically display on your friends' screen. Be carefully and respect other users.</li>
+          <li>You can use this URL and send it to friends, but watch yourself. Remember rule number one. </li>
+          <li>Content is automatically saved on your local memory, so you can close this page, go to the kitchen to make some sandwitches, come back and return to this page and your text will be still there. Great, huh?  </li>
+          <li>
+            You do not talk about FIGHT CLUB.
+          </li>
+          <li>If you understand, there is your URL:
+          </li>
+          </li>
+        </ol>
+      </p>
+      <input type="url" value="<%= url %>"></input>
+    </div>
   </div>
   <button id="share">Edit with Friends</button>
-  
+
 <div id="editor">
 
   <header contenteditable="true" class="title">

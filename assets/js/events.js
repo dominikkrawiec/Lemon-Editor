@@ -55,8 +55,6 @@ shareBtn.addEventListener('click', function(){
     }
   });
 });
-
-
 // View events
 
 $('#editor').on('click', '*', function(){
@@ -84,4 +82,8 @@ $('#editor').on('click', '*', function(){
   }
 
   $('#editor').css('transform', 'translateY(-'+ howMuch+')');
+  });
+
+  $('.close').click(function(){
+    $('#link').hide();
   });
