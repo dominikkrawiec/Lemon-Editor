@@ -84,6 +84,6 @@ $('#editor').on('click', '*', function(){
   $('#editor').css('transform', 'translateY(-'+ howMuch+')');
   });
 
-  $('.close').click(function(){
+  $('.url-box button').click(function(){
     $('#link').hide();
   });

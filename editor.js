@@ -6,11 +6,8 @@ var docCont = require("./controllers/documentController");
 var app = express();
 app.set('view engine', 'ejs');
 app.use(express.static('./assets'));
-<<<<<<< HEAD
 var serv = app.listen(process.env.PORT || 3000)
-=======
-var serv = app.listen(process.env.PORT)
->>>>>>> f24e1456ede7d4e19806953c6c9702c3442c00bc
+
 var token = docCont(app);
 var io = socket(serv);
 

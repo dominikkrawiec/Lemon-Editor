@@ -76,9 +76,10 @@ body {
   background-color: #F6F6F6;
   border: 3px solid lightgray;
   border-radius: 5px;
-  padding: 50px 70px;
+  padding: 30px 70px;
   position: absolute;
   left: 50%;
+  text-align: center;
   top: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.8;
@@ -88,11 +89,23 @@ body {
   margin-top: 0;
 }
 
-.url-box input {
+.url-box input,
+.url-box button {
   padding: 10px;
   border: 1px solid skyblue;
   border-radius: 5px;
   width: 100%;
+  margin-bottom: 20px;
+}
+
+.url-box button {
+  width: 60%;
+  background-color: skyblue;
+  cursor: pointer;
+}
+
+.url-box button:hover {
+  color: white;
 }
 
 .url-box .close {
