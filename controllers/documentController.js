@@ -34,7 +34,7 @@ module.exports = function(app) {
         currentToken.id = req.params.token;
 
         res.render('shared', {
-              url: 'localhost:3000/' + req.params.token,
+              url: __dirname + req.params.token,
               title: cont.title,
               lead: cont.lead,
               content: cont.content

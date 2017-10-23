@@ -1,8 +1,8 @@
 
 
 // Make connection to the server
-//var socket = io.connect('https://cryptic-sea-12612.herokuapp.com');
-var socket = io.connect('http://localhost:3000')
+var socket = io.connect('https://cryptic-sea-12612.herokuapp.com');
+//var socket = io.connect('http://localhost:3000')
 
 var editor = document.querySelector('.content'),
     title = document.querySelector('header'),
@@ -19,6 +19,7 @@ document.onkeyup = function(){
 }
 
 socket.on('editor', function(data){
+  if(window.location.pathname == data.url) {
   editor.innerHTML = data.content;
   lead.innerHTML = data.lead;
   title.innerHTML = data.title;
@@ -28,5 +29,5 @@ socket.on('editor', function(data){
   // setting current caret position
   createRange(editor, 5, false);
   setCurrentCursorPosition(localStorage.getItem('cursor'), currentElement);
-
+}
 })

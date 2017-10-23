@@ -21,6 +21,14 @@ body {
   transition: all 1s ease-in-out;
  }
 
+ .title:focus,
+ .lead:focus,
+ .content:focus {
+  border: 0px solid white;
+  box-shadow: none;
+  outline: none;
+  }
+
 
 .title {
 /*  font-family: 'Gilda Display', serif; */
@@ -47,6 +55,9 @@ body {
 
 /* Share Button */
 #share {
+  background-image: url('../img/vitamins.png');
+  background-size: contain;
+  background-color: transparent;
   border: none;
   cursor: pointer;
   padding: 10px;
@@ -55,6 +66,9 @@ body {
   transition: all 0.5s ease-in-out;
   top: 20px;
   left: 20px;
+  width: 100px;
+  height: 100px;
+
 }
 
 #share:hover {

@@ -16,8 +16,8 @@ io.on('connection', function(soc){
 
   soc.on('editor', function(data){
     var token = docCont(app);
-  //console.log(token + ' : ' + data.url);
-    if(token == data.url.substr(1)) {
+  console.log(token + ' : ' + data.url.substr(1));
+    if(token != '' && token == data.url.substr(1)) {
        soc.broadcast.emit('editor', data);
     }
 
